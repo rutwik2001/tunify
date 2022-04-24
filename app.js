@@ -207,9 +207,9 @@ app.get("/", function(req, res){
       songs: songs,
       albums: albums,
       });
-    }).clone()
+    })
     
-  }).clone();
+  });
   
 });
 
