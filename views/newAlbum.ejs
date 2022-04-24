@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+    <h1 style="color: #54D5AD">New Album</h1>
+    </br>
+
+    <form class="" action="/creator/<%=creatorId%>/newAlbum" method="post">
+        <div class="form-group">
+            <label><b style="color: #fff">Name</b></label>
+            <input class="form-control" type="text" name="name">
+        </div>
+    </br>
+        <button class="btn" type="submit" name="button">Create</button>
+    </form>
+
+
+
+    <%- include("partials/footer"); -%>

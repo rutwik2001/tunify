@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+
+    <h1 style="color: #54D5AD">Add Song</h1>
+    </br>
+
+    <form class="" action="/album/<%=albumId%>/newSong" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label><b style="color: #fff">Name</b></label>
+            <div class="container"></div>
+            <input class="form-control" type="text" name="name">
+        </br>
+            <label><b style="color: #fff">Song File</b></label>
+            <input type="file" name="target_file" required>
+        </div>
+        <button class="btn" type="submit" name="button" value="Upload">Add</button>
+    </form>
+
+    
+
+
+
+    <%- include("partials/footer"); -%>

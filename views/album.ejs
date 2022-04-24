@@ -1,0 +1,112 @@
+<%- include("partials/header"); -%>
+
+    <h1 style="text-align:center;color: #54D5AD"><%=album.name%></h1>
+    </br>
+    </br>
+
+    <div class="container" style="text-align:center">
+        <div class="row align-items-start">
+            <div class="col">
+                <h4 style="color: #fff">
+                    <%=creator.name%>
+                </h4>
+            </div>
+            <div class="col">
+                <h4 style="color: #fff">
+                    <%=creator.artistName%>
+                </h4>
+            </div>
+    
+        </div>
+        </br>
+        
+        
+    </div>
+
+
+    <!-- <h1>
+        
+    </h1>
+    <h1>
+        <%=album.numId%>
+    </h1>
+    <h1>
+        <%=album.creatorId%>
+    </h1>
+    <h1>
+        <%=album.likes%>
+    </h1>
+    <h1>
+        <%=creator.name%>
+    </h1>
+    <h1>
+        <%=creator.numId%>
+    </h1>
+    <h1>
+        <%=creator.artistName%>
+    </h1> -->
+   
+<button class="btn "><a style="color: white;" href="/album/<%=album.numId%>/newSong">New Song</a></button>
+</br>
+</br>
+</br>
+    
+    <%if(songs.length==0){%>
+        <h1>No Songs</h1>
+        <%} else {%>
+    
+    
+    <%var i=0%>
+            <% songs.forEach(function(song){ i++ %>
+
+                <div style="font-size: 17px" class="container search-song">
+                    <div class="row align-items-start">
+                        <div class="col-2">
+                            <b>
+                                <%=i%>
+                            </b>
+                        </div>
+                        <div class="col-6">
+                            <b>
+                                <%=song.name%>
+                            </b>
+                        </div>
+                        <div class="col-4">
+                            <a href="/songs/<%=song.numId%>"><b><i class="fas fa-play "></i></b></a>
+                        </div>
+                        
+                
+                    </div>
+                
+                
+                </div>
+            </br>
+    
+                <!-- <h1>
+                    <%=song.name%>
+                </h1>
+                <h1>
+                    <%=song.numId%>
+                </h1>
+                <h1>
+                    <%=song.location%>
+                </h1>
+                <h1>
+                    <%=song.likes%>
+                </h1>
+                <h1>
+                    <%=song.plays%>
+                </h1>
+                <h1>
+                    <%=song.albumId%>
+                </h1> -->
+    
+    
+    
+                <% }) %>
+    
+                    <%}%>
+
+
+
+    <%- include("partials/footer"); -%>

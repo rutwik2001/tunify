@@ -1,0 +1,98 @@
+<%- include("partials/header"); -%>
+
+    
+
+    <h1 style="color: #54D5AD">New Songs</h1>
+</br>
+    
+    <%if(songs.length == 0){%>
+        <h1>No Songs</h1>
+    <%} else {%>
+
+    
+    <%var i = 0%>
+    <% songs.forEach(function(song){ i++ %>
+
+
+
+        <div class="container search-song">
+            <div style="font-size: 17px" class="row align-items-start">
+                <div class="col-2">
+                    <b class="text">
+                        <%=i%>
+                    </b>
+                </div>
+                <div class="col-6">
+                    <b class="text">
+                        <%=song.name%>
+                    </b>
+                </div>
+                <div class="col-4 text">
+                    <a class=""href="/songs/<%=song.numId%>"><b class="text">
+                        <i class="fas fa-play "></i>
+                    </b></a>
+                </div>
+                
+        
+            </div>
+        
+        
+        </div>
+    </br>
+
+        
+    
+        <!-- <h1>
+            <%=song.name%>
+        </h1>
+        <h1>
+            <%=song.numId%>
+        </h1>
+        <h1>
+            <%=song.location%>
+        </h1>
+        <h1>
+            <%=song.likes%>
+        </h1>
+        <h1>
+            <%=song.plays%>
+        </h1>
+        <h1>
+            <%=song.albumId%>
+        </h1> -->
+        
+    
+    
+        <% }) %>
+
+    <%}%>
+    </br>
+    </br>
+
+        <h1 style="color: #54D5AD">New Albums</h1>
+        </br>
+    <%if(albums.length==0){%>
+        <h1>No Albums</h1>
+        <%} else {%>
+    
+    
+    
+            <% albums.forEach(function(album){ %>
+    
+                <div class="card album" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=album.name%>
+                        </h5>
+                        
+                        <a href="/album/<%=album.numId%>" class="card-link">View Album</a>
+                    </div>
+                </div>
+    
+    
+    
+                <% }) %>
+    
+                    <%}%>
+
+            <%- include("partials/footer"); -%>

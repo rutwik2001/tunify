@@ -1,0 +1,94 @@
+<%- include("partials/header"); -%>
+
+    <h1 style="text-align:center;color: #54D5AD">Profile</h1>
+    </br>
+    </br>
+
+
+    <div class="container" style="text-align:center">
+        <div class="row align-items-start">
+            <div class="col ">
+                <h5 style="color: #fff">Name</h5>
+                <h4 class="box">
+                    <%=creator.name%>
+                </h4>
+            </div>
+            <div class="col ">
+                <h5 style="color: #fff">Artist Name</h5>
+                <h4 class="box">
+                    <%=creator.artistName%>
+                </h4>
+            </div>
+
+        </div>
+        </br>
+        <div class="row align-items-center">
+            <div class="col">
+                <h5 style="color: #fff">Date of Birth</h5>
+                <h4 class="box">
+                    <%=creator.dob%>
+                </h4>
+            </div>
+            <div class="col ">
+                <h5 style="color: #fff">Email</h5>
+                <h4 class="box">
+                    <%=creator.email%>
+                </h4>
+            </div>
+
+        </div>
+        </br>
+        <div class="row align-items-end">
+            <div style="margin: auto" class="col-4 ">
+                <h5 style="color: #fff">Phone</h5>
+                <h4 class="box">
+                    <%=creator.phone%>
+                </h4>
+            </div>
+
+
+        </div>
+    </div>
+    </br>
+
+
+
+    <!-- <h1>
+            <%=creator.numId%>
+        </h1> -->
+
+
+    
+    </br>
+    <%if(albums.length==0){%>
+        <h1>No Albums</h1>
+        <%} else {%>
+
+
+
+            <% albums.forEach(function(album){ %>
+
+                <div class="card album" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=album.name%>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <%=creator.artistName%>
+                        </h6>
+                        <a href="/album/<%=album.numId%>" class="card-link">View Album</a>
+                    </div>
+                </div>
+
+
+
+                <% }) %>
+
+                    <%}%>
+
+
+
+                        </br>
+
+
+                        <%- include("partials/footer"); -%>

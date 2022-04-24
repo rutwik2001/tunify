@@ -1,0 +1,42 @@
+<%- include("partials/header"); -%>
+
+    <h1 style="color: #54D5AD">New Creator</h1>
+    </br>
+
+
+    <form class="" action="/newCreator" method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b style="color: #fff">Name</b></label>
+            <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b style="color: #fff">Date of Birth</b></label>
+            <input type="text" class="form-control" name="dob" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b style="color: #fff">Artist Name</b></label>
+            <input type="text" class="form-control" name="artistName" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b style="color: #fff">Email</b></label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b style="color: #fff">Phone</b></label>
+            <input type="text" class="form-control" name="phone" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"><b style="color: #fff">Password</b></label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+        </div>
+        
+        
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    </br>
+    
+    
+
+
+            <%- include("partials/footer"); -%>

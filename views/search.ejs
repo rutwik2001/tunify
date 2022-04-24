@@ -1,0 +1,88 @@
+<%- include("partials/header"); -%>
+
+    <h1 style="color: #54D5AD">Search</h1>
+    </br>
+
+    <form class="form-group" action="/search" method="Post">
+        
+            <input class="form-control" type="text" name="query">
+            <br>
+            <button class="btn " type="submit" name="button">Search</button>
+
+            </form>
+            </br>
+            </br>
+            <%if(songs.length==0){%>
+                <%} else {%>
+            
+            
+                    <%var i=0%>
+                    <% songs.forEach(function(song){i++ %>
+                       
+                        <div style="font-size: 17px" class="container search-song">
+                            <div class="row align-items-start">
+                                <div class="col-2">
+                                    <b>
+                                        <%=i%>
+                                    </b>
+                                </div>
+                                <div class="col-6">
+                                    <b>
+                                        <%=song.name%>
+                                    </b>
+                                </div>
+                                <div class="col-4">
+                                    <a href="/songs/<%=song.numId%>"><b><i class="fas fa-play "></i></b></a>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            
+                        </div>
+            
+                        <!-- <h1>
+                            <%=song.name%>
+                        </h1>
+                        <h1>
+                            <%=song.numId%>
+                        </h1>
+                        <h1>
+                            <%=song.location%>
+                        </h1>
+                        <h1>
+                            <%=song.likes%>
+                        </h1>
+                        <h1>
+                            <%=song.plays%>
+                        </h1>
+                        <h1>
+                            <%=song.albumId%>
+                        </h1> -->
+            
+            
+            
+                        <% }) %>
+            
+                            <%}%>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        
+        
+    </form>
+
+    
+
+
+
+    <%- include("partials/footer"); -%>

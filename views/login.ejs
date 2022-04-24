@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+
+<form action="/login" class="sign-in-form" method="post">
+            
+            <h1 style="color: #54D5AD">Login</h1>
+            </br>
+            <div class="input-field">
+              <i style="color: #fff;"class="fas fa-user"></i>
+              <input type="email" class="form-control" placeholder="Email" name="email" required />
+            </div>
+            </br>
+            <div class="input-field">
+              <i style="color: #fff;" class="fas fa-lock"></i>
+              <input type="password" class="form-control" placeholder="Password" name="password" value="" placeholder="Password" required/>
+            </div>
+
+            </br>
+            <input type="submit" value="Login" class="btn solid" />
+            <p style="color: #fff; padding-top:5px;">Not a creator.&nbsp<a href="/newCreator">Create Here</a></p>
+          </form>
+
+
+<%- include("partials/footer"); -%>

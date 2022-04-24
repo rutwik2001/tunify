@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+
+<h2 class="song-name" style="text-align:center; color: #fff"><%=song.name%></h2>
+<audio controls="" autoplay="" name="media">
+    <source src="/song/<%=song.location%>" type="audio/mpeg">
+</audio>
+<a href="/songs/<%=song.numId-1%>" class="btn backward"><i style="color: #fff;" class="fas fa-backward"></i></a>
+<a href="/songs/<%=song.numId+1%>" class="btn forward"><i style="color: #fff;" class="fas fa-forward"></i></a>
+
+
+
+
+
+
+
+<%- include("partials/footer"); -%>
