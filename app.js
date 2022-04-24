@@ -335,9 +335,9 @@ app.get("/album/:albumId", async function(req, res){
       creator: creator,
       songs: songs,
       });
-        })
+        }).clone()
         
-      })
+      }).clone()
     
   }).clone();
   } catch(err){
