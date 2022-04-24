@@ -254,7 +254,7 @@ app.get("/creator", checkAuthenticated,async function(req, res){
       albums: albums,
       
       });
-      })
+      }).clone();
     
   }).clone();
   } catch(err){
