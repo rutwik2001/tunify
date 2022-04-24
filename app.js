@@ -339,7 +339,7 @@ app.get("/album/:albumId", async function(req, res){
         
       })
     
-  });
+  }).clone();
   } catch(err){
     console.log(err.message)
   }
