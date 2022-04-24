@@ -207,9 +207,9 @@ app.get("/", function(req, res){
       songs: songs,
       albums: albums,
       });
-    })
+    }).clone()
     
-  });
+  }).clone();
   
 });
 
@@ -248,6 +248,7 @@ app.get("/creator", checkAuthenticated,async function(req, res){
     console.log(_currentUser_)
     const creatorId = _currentUser_.numId;
     await Creator.findOne({numId: creatorId}, async function(err, creator){
+
       await Album.find({creatorId: creatorId}, function(err, albums){
         res.render("creatorProfile", {
       creator: creator,
@@ -269,7 +270,7 @@ app.get("/albums", async function(req, res){
         res.render("albums", {
       albums: albums,
       });
-      })
+      }).clone()
   } catch(err){
     console.log(err)
   }
@@ -285,9 +286,9 @@ app.get("/creator/:creatorId", async function(req, res){
       creator: creator,
       albums: albums,
       });
-      })
+      }).clone()
     
-  });
+  }).clone();
   } catch(err){
     console.log(err.message)
   }
@@ -335,11 +336,11 @@ app.get("/album/:albumId", async function(req, res){
       creator: creator,
       songs: songs,
       });
-        })
+        }).clone()
         
-      })
+      }).clone()
     
-  });
+  }).clone();
   } catch(err){
     console.log(err.message)
   }
@@ -402,7 +403,7 @@ app.get("/songs/:songId", async function(req, res){
     res.render("song", {
       song: song,
       });
-  });
+  }).clone();
   } catch(err){
     console.log(err.message)
   }
